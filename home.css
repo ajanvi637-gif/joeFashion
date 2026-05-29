@@ -1,0 +1,1170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ============ NAVBAR ============ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #f4eded;
+    height: 70px;
+}
+
+/* ============ LOGO ============ */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo img {
+    width: 45px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.joe-text {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    font-family: fantasy;
+}
+
+.fashion-text {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fc2779;
+    font-family: fantasy;
+}
+
+/* ============ NAV LINKS ============ */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-size: larger;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    background: #b01b4e;
+    height: 2px;
+    transition: width 0.3s ease;
+
+}
+
+
+.nav-links a:hover::after {
+
+    width: 100%;
+}
+
+
+
+
+/* ============ ICONS ============ */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.inner-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+}
+
+/* ============ SEARCH ============ */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    background-color: #f5f6fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    width: 420px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+/* ============ BANNER ============ */
+.pink-banner {
+    background: linear-gradient(to right, #b993ff, #fbc2eb);
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    height: 300px;
+
+}
+
+.pink-banner h1 {
+    font-size: 40px;
+}
+
+.pink-banner p {
+    font-size: 22px;
+}
+
+.pink-banner button {
+    padding: 10px 25px;
+    border: none;
+    background: white;
+    color: #fc2779;
+    border-radius: 5px;
+}
+
+/* ============ CATEGORIES ============ */
+.category-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.categories {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+
+.categories::-webkit-scrollbar {
+    display: none;
+}
+
+/* cards */
+
+.card-sec {
+    min-width: 140px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+    border-radius: 12px;
+    transition: 0.3s;
+
+}
+
+.card-sec img {
+    width: 140px;
+    height: 160px;
+    object-fit: fill;
+    transition: 0.3s ease;
+    /* border-radius:6px; */
+}
+
+.card-sec p {
+    text-align: center;
+    margin-top: 10px;
+    margin-left: -20px;
+    margin-right: auto;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 6px;
+    background: linear-gradient(to right, #ffe4ec, #ffc0cb);
+    border-radius: 8px;
+
+}
+
+
+/* hover */
+
+.card-sec:hover img {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* arrow buttons */
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+/*___________ch ocolate section___________*/
+
+.Chocolate {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Parent container */
+
+.background-color-choco {
+    position: relative;
+    height: 100%;
+}
+
+/* Background */
+.Choco-bg-clr {
+    position: absolute;
+    inset: 0;
+    /*----left 0, right 0, top 0, bottom 0----*/
+    background: linear-gradient(to bottom, #3e2723, #5d4037, #8d6e63);
+    z-index: 1;
+}
+
+/* Main image */
+.Choco-main-img img {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    height: 480px;
+    width: 400px;
+    /* width: auto; */
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 4px solid rgb(229, 147, 47);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition:
+        transform 0.4s ease-out,
+        box-shadow 0.4s ease-out;
+    z-index: 2;
+
+}
+
+.Choco-main-img img:hover {
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        /* depth */
+        0 0 20px rgba(255, 255, 255, 0.5),
+        /* glow */
+        0 0 15px rgba(141, 94, 94, 0.6);
+    /* chocolate tint */
+
+    transform: translateY(-6px) scale(1.05);
+}
+
+/* Cards container */
+.choco-section-imaages {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    position: absolute;
+    /* FIX */
+    z-index: 3;
+    /* sabse upar */
+    right: 5px;
+    top: 20px;
+    gap: 20px;
+
+
+
+}
+
+.choco-card {
+    align-items: center;
+
+}
+
+.choco-card img {
+
+    height: 200px;
+    width: 160px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    opacity: 0.85;
+    transition:
+        transform 0.6s ease,
+        opacity 0.6s ease,
+        box-shadow 0.6s ease;
+    filter: brightness(0.75);
+
+
+}
+
+/* Hover */
+.choco-card img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* soft zoom */
+.choco-card:hover img {
+    transform: scale(1.05);
+}
+
+
+
+.choco-card:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 10px 15px rgb(172, 120, 120);
+    filter: brightness(1);
+
+}
+
+/*  animation */
+@keyframes card2FadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 0.95;
+        transform: translateY(0);
+    }
+}
+
+/*  4 images ke liye animation */
+.choco-card img {
+    opacity: 0;
+    animation: card2FadeUp 1s ease forwards;
+}
+
+/*  ek-ek karke aane ke liye delay */
+.choco-card:nth-child(1) img {
+    animation-delay: 0.2s;
+}
+
+.choco-card:nth-child(2) img {
+    animation-delay: 0.4s;
+}
+
+.choco-card:nth-child(3) img {
+    animation-delay: 0.6s;
+}
+
+.choco-card:nth-child(4) img {
+    animation-delay: 0.8s;
+}
+
+
+/* Text */
+.choco-card span {
+    color: white;
+    opacity: 0.4;
+    font-size: 13px;
+    text-shadow: 2px #4b0000;
+    letter-spacing: 1px;
+}
+
+.text-choco {
+    position: absolute;
+    z-index: 3;
+    left: 460px;
+    top: 190px;
+}
+
+.text-choco .ModernH1 {
+    font-family: 'Playfair Display', Didot, 'Bodoni Moda', serif;
+    /* Luxury */
+    font-size: 50px;
+    /* bada text */
+    font-weight: 700;
+    letter-spacing: 2px;
+    unicode-bidi: isolate;
+
+}
+
+.ModernH1 {
+    position: relative;
+    left: -20px;
+}
+
+
+.ModernH1:hover {
+    color: rgb(172, 120, 120);
+    letter-spacing: 4px;
+    transition: all 0.6s ease;
+    transform: scale(1.02);
+    text-shadow: 0 10px 25px rgba(255, 0, 0, 0.35);
+
+}
+
+.para1 {
+    font-family: 'Playfair Display', Didot, 'Bodoni Moda', serif;
+    /* Luxury */
+    position: relative;
+    font-size: 13px;
+    /* chhota text */
+    opacity: 0.6;
+    transition: opacity 0.6s ease;
+    letter-spacing: 1px;
+    unicode-bidi: isolate;
+    left: 10px;
+}
+
+
+.para1:hover {
+    opacity: 1;
+    color: rgb(172, 120, 120);
+}
+
+/*-----button shp now -----*/
+.btnchoco {
+    position: absolute;
+    top: 350px;
+    left: 590px;
+    z-index: 3;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+
+    background: #fff;
+    padding: 10px 18px;
+    /* reduced padding */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: inline-flex;
+    /* better than flex for button */
+    align-items: center;
+    gap: 10px;
+
+    transition: all 0.3s ease;
+}
+
+/* Arrow using before */
+.btnchoco::after {
+    content: " ➜";
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+/*  Hover Effect */
+.btnchoco:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Arrow move effect */
+.btnchoco:hover::after {
+    transform: translateX(-3px);
+}
+
+/* ____________________store section_________________ */
+
+
+.store-section {
+    padding: 40px 60px;
+    background-color: #f5f5f5;
+}
+
+/* Small heading */
+.small-heading {
+    font-size: 14px;
+    color: #777;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+
+/* Main heading */
+.main-heading {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0a2540;
+    margin-bottom: 30px;
+}
+
+
+/* Container */
+.store-container {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    overflow-x: auto;
+    /*  horizontal scroll */
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.store-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Card */
+.store-card {
+    text-align: center;
+    flex-shrink: 0;
+    /* 🔥 items shrink na ho */
+}
+
+
+/* Image */
+.store-card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    /* 🔥 circle */
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+
+/* Hover effect */
+.store-card:hover img {
+    transform: scale(1.15) rotate(2deg);
+    /* zoom + thoda rotate */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Text */
+.store-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #0a2540;
+    transition: 0.3s;
+}
+
+.store-card:hover p {
+    color: #e91e63; /* pink highlight */
+    transform: translateY(3px);
+}
+
+/* Animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation */
+.store-card {
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+
+
+/*____________________________________brands_________________________________________*/
+
+.Brands {
+    width: 100%;
+    background: linear-gradient(to bottom, lightblue, lightpink);
+    padding-top: 20px;
+}
+
+.heading-BRAND {
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+
+.heading-BRAND .hottestH1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+
+
+.all-Brands {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 1300px;
+    height: 800px;
+    gap: 10px;
+
+}
+
+/* same animation */
+/* @keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-brand {
+    animation: fadeSlideUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+/* delay for each card */
+/* .card-brand:nth-child(1) { animation-delay: 0.1s; }
+.card-brand:nth-child(2) { animation-delay: 0.2s; }
+.card-brand:nth-child(3) { animation-delay: 0.3s; }
+.card-brand:nth-child(4) { animation-delay: 0.4s; }
+.card-brand:nth-child(5) { animation-delay: 0.5s; }
+.card-brand:nth-child(6) { animation-delay: 0.6s; }
+.card-brand:nth-child(7) { animation-delay: 0.7s; }
+.card-brand:nth-child(8) { animation-delay: 0.8s; }
+.card-brand:nth-child(9) { animation-delay: 0.9s; }
+.card-brand:nth-child(10){ animation-delay: 1s; } */
+
+
+/* Animation keyframes */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Apply animation to cards */
+.card-brand {
+    animation: fadeSlideUp 0.8s ease forwards;
+    opacity: 0;
+    /* start hidden */
+}
+
+.card-brand:hover {
+    transform: translateY(-8px) scale(1.03);
+    transition: 0.3s;
+}
+
+.card-brand img {
+    width: 240px;
+    height: 300px;
+
+
+
+}
+
+.card-brand h4 {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.offer {
+    color: #e91e63;
+    /* pink highlight */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.desc {
+    font-size: 13px;
+    color: #555;
+}
+
+/*___________mehronn section_____________________________________________*/
+
+/* outer */
+.mehroon {
+    width: 100%;
+}
+
+/* hero section */
+.mehroon-div-img {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+
+}
+
+/* background gradient */
+.background-color {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            #4b0000,
+            #700000,
+            #a12c2c);
+    z-index: 1;
+}
+
+/* main hero image */
+.image {
+    position: absolute;
+    right: 38%;
+    bottom: 0;
+    z-index: 2;
+    top: 3px;
+    width: 0;
+    transition: transform 0.3s ease-in;
+
+}
+
+.dress {
+    /* border: 4px  groove ; */
+    border-radius: 80%;
+    transition:
+        transform 1s ease,
+        border-radius 1s ease,
+        filter 1s ease;
+}
+
+.image img:hover {
+
+    border-radius: 14px;
+    transform: scale(1.1);
+    transition: transform 2s ease;
+    border: none;
+
+
+}
+
+.image:hover .dress {
+    transform: scale(1.08);
+    border-radius: 16px;
+    filter: drop-shadow(0 20px 25px rgba(120, 0, 0, 0.6));
+}
+
+@keyframes floatDress {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.03);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+.dress {
+    animation: floatDress 6s ease-in-out infinite;
+}
+
+
+.right-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    /* 🔥 2 in one row */
+    gap: 15px;
+    align-items: center;
+    margin: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+
+.card-label {
+
+    color: white;
+    opacity: 0.4;
+    font-size: 13px;
+    text-shadow: 2px #4b0000;
+    letter-spacing: 1px;
+
+
+}
+
+.hero-card img {
+    width: 150px;
+    height: 190px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    margin-bottom: 10px;
+    opacity: 0.85;
+    transition:
+        transform 0.6s ease,
+        opacity 0.6s ease,
+        box-shadow 0.6s ease;
+    filter: brightness(0.75);
+}
+
+
+
+/* soft zoom */
+.hero-card:hover img {
+    transform: scale(1.05);
+}
+
+
+
+.hero-card:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 10px 15px rgba(198, 11, 11, 0.763);
+    filter: brightness(1);
+
+}
+
+/*  animation */
+@keyframes cardFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 0.95;
+        transform: translateY(0);
+    }
+}
+
+/*  4 images ke liye animation */
+.hero-card img {
+    opacity: 0;
+    animation: cardFadeUp 1s ease forwards;
+}
+
+/*  ek-ek karke aane ke liye delay */
+.hero-card:nth-child(1) img {
+    animation-delay: 0.2s;
+}
+
+.hero-card:nth-child(2) img {
+    animation-delay: 0.4s;
+}
+
+.hero-card:nth-child(3) img {
+    animation-delay: 0.6s;
+}
+
+.hero-card:nth-child(4) img {
+    animation-delay: 0.8s;
+}
+
+
+
+/*-----button shp now -----*/
+.btn1 {
+    position: absolute;
+    top: 350px;
+    left: 590px;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+
+    background: #fff;
+    padding: 10px 18px;
+    /* reduced padding */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: inline-flex;
+    /* better than flex for button */
+    align-items: center;
+    gap: 10px;
+
+    transition: all 0.3s ease;
+}
+
+/* Arrow using before */
+.btn1::before {
+    content: "⬅";
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+/*  Hover Effect */
+.btn1:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Arrow move effect */
+.btn1:hover::before {
+    transform: translateX(-3px);
+}
+
+
+
+
+.text-red-section {
+    position: absolute;
+    top: 190px;
+    left: 500px;
+    color: #fff;
+    transform: translateY(-6px);
+}
+
+.text-red-section .ModernH2 {
+    font-family: 'Playfair Display', Didot, 'Bodoni Moda', serif;
+    /* Luxury */
+    font-size: 50px;
+    /* bada text */
+    font-weight: 700;
+    letter-spacing: 2px;
+    unicode-bidi: isolate;
+
+}
+
+.ModernH2 {
+    position: relative;
+    left: -20px;
+}
+
+
+.ModernH2:hover {
+    color: rgb(203, 11, 11);
+    letter-spacing: 4px;
+    transition: all 0.6s ease;
+    transform: scale(1.05);
+    text-shadow: 0 10px 25px rgba(255, 0, 0, 0.35);
+
+}
+
+.para2 {
+    font-family: 'Playfair Display', Didot, 'Bodoni Moda', serif;
+    /* Luxury */
+    position: relative;
+    font-size: 13px;
+    /* chhota text */
+    opacity: 0.6;
+    transition: opacity 0.6s ease;
+    letter-spacing: 1px;
+    unicode-bidi: isolate;
+    left: 20px;
+}
+
+
+.para2:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+/*_________________________________________footer*/
+
+.nykaa-footer {
+    background: #f9f9f9;
+    padding: 60px 90px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Footer-mini-page */
+.footer {
+    background: #111;
+    padding: 30px 20px;
+}
+
+/* Disclaimer box */
+.footer-disclaimer {
+    max-width: 1100px;
+    margin: auto;
+    background: #1a1a1a;
+    padding: 20px 25px;
+    border-radius: 10px;
+    border-left: 4px solid #ff4d4d; /* 🔥 highlight */
+}
+
+/* Title */
+.disclaimer-title {
+    color: #ff4d4d;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.disclaimer-text {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* main heading */
+
+.nykaa-footer h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #111;
+}
+
+/* sub heading */
+
+.nykaa-footer h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: #222;
+    position: relative;
+}
+
+/* underline effect */
+
+.nykaa-footer h3::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #e91e63;
+    display: block;
+    margin-top: 6px;
+}
+
+/* small headings */
+
+.nykaa-footer h4 {
+    font-size: 17px;
+    margin-top: 22px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* paragraph */
+
+.nykaa-footer p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* links */
+
+.nykaa-footer a {
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* hover */
+
+.nykaa-footer a:hover {
+    color: #c2185b;
+    text-decoration: underline;
+}
+
+/* BLACK SECTION */
+.footer-top {
+  background: #2c2c2c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 60px;
+  flex-wrap: wrap;
+}
+
+.footer-top h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-top-left img {
+  width: 140px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.footer-top-right .phone {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* MAIN FOOTER */
+.footer-last {
+  background: #f5f5f5;
+  padding: 40px 60px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-col a {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #e91e63;
+  padding-left: 5px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  background: #c2185b;
+  color: white;
+  text-align: center;
+  padding: 12px;
+}
+
+/* responsive */
+
+@media (max-width:768px) {
+
+    .nykaa-footer {
+        padding: 40px 25px;
+    }
+
+    .nykaa-footer h2 {
+        font-size: 24px;
+    }
+
+    .nykaa-footer p {
+        font-size: 14px;
+    }
+
+}
